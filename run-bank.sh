@@ -14,13 +14,15 @@ trap cleanup SIGINT SIGTERM
 
 # Run backend server
 cd reckless-bank-be
-./gradlew clean build & ./gradlew bootRun &
+./gradlew clean build &
+./gradlew bootRun &
 BE_PID=$!
 cd ..
 
 # Run frontend server
 echo "Starting frontend..."
 cd reckless-bank-fe
+npm install &
 npm run dev &
 FE_PID=$!
 cd ..
