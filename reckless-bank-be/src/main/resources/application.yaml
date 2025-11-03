@@ -1,0 +1,10 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: reckless-bank-be
+
+springdoc:
+  swagger-ui:
+    path: /docs
